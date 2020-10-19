@@ -8,10 +8,6 @@ from django.contrib.auth.models import User
 from django.template.loader import render_to_string
 from django.views.generic import RedirectView
 
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework import authentication, permissions
-
 # Create your views here.
 def signup(request):
     if request.method == 'POST':
@@ -19,8 +15,8 @@ def signup(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            user_password = form.cleaned_data.get('password')
-            user = authenticate(username=username, user_password=user_password)
+            user_password = form.cleaned_data.get('password1')
+            user = form.save()
             login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             return redirect('index')
     else:

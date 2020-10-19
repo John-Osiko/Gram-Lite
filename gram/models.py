@@ -69,7 +69,7 @@ class Image(models.Model):
         return self.likes.count()
 
     def __str__(self):
-        return f'{self.user.name} Post'
+        return f'{self.user.name} Image'
 
 
 
@@ -80,7 +80,7 @@ class Comment(models.Model):
     p_date = models.DateTimeField(auto_now_add=True, null=True)
 
     def __str__(self):
-        return f'{self.user.name} Post'
+        return f'{self.user.name} Image'
 
     class Meta:
         ordering = ["-pk"]

@@ -5,7 +5,7 @@
 
 {% block content %}
 
-<div class="container mt-4">
+<div class="container mt-5">
     <div class="row">
 
         <!--spacer-->
@@ -17,22 +17,22 @@
                 
                 <!--Form-->
                 <div class="card-body mb-3 mr-3 ml-3">
-                    <p class="text-center">Sign up to see photos and videos from friends.</p>
+                    <p class="text-center" style="font-size:12px;">Sign up to see photos and videos from friends.</p>
                     <form action="" method="post" novalidate>
                         {% csrf_token%}
                         {{ form|crispy}}
                         <button type="submit" class="btn btn-primary btn-sm"> Sign up</button>
                     </form>
                 </div>
-                <p class="mr-4 ml-4 mb-2 text-center">By signing up, you acknowledge that you have read and understand our Cookie Policy, Privacy Policy, and our Terms of Service.</p>
+                <p class="mr-4 ml-4 mb-2 text-center" style="font-size:14px;">By signing up, you acknowledge that you have read and understand our Cookie Policy, Privacy Policy, and our Terms of Service.</p>
             </div>
             <div class="card mt-2">
-                <div class="card-body mt-3 mb-2 mr-3 ml-3">
+                <div class="card-body mt-3 mb-2 mr-3 ml-3 text-center" style="font-size:12px;">
                     <p>Already have an account? <a href="{% url 'login' %}">Log in</a></p>
                 </div>
             </div>
             <div container>
-                <p class="text-center mt-4">Get app</p>
+                <p class="text-center text-white mt-4">Get app</p>
                 <div class="row">
                     <div class="col-xs-1 col-sm-1 col-md-1"></div>
                     <div class="col-xs-5 col-sm-5 col-md-5 mb-2">
