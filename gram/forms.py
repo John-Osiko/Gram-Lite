@@ -39,4 +39,4 @@ class CommentForm(forms.ModelForm):
 
     class Meta:
         model = Comment
-        fields = ('comment', 'p_date')
+        fields = ('comment')
