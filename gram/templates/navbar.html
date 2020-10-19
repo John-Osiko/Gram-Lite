@@ -1,6 +1,6 @@
 {% load static %}
 
-<div class="navbar fixed-top bg-white">
+<div class="navbar fixed-top" style="background-image: url('../../static/images/mobile-background.jpg');background-repeat:no-repeat;background-size:cover;">
     <nav class="container">
         <span class="navbar-brand mb-0 h1">
             <a href="/">
@@ -11,14 +11,13 @@
         </span>
         <form class="mb-0 h1 ml-auto mr-auto" id="searchform" action="{% url 'search' %}" >
             <input name="search_user" autocomplete="on" id="searching" class="form-control d-none d-md-block" placeholder="Search">
-            <i class="spinner-border border border-dark"></i>
         </form>
         <span class="pull-right">
-            <i class="fas fa-home"></i>
-            <i class="fas fa-paper-plane"></i>
-            <i class="fas fa-compass"></i>
-            <i class="fas fa-heart"></i>
-            <a href="{% url 'profile' user.username %}"><i class="fas fa-user-circle"></i></a>
+            <i class="fas fa-home pr-3"></i>
+            <i class="fas fa-paper-plane pr-3"></i>
+            <i class="fas fa-compass pr-3"></i>
+            <i class="fas fa-heart pr-3"></i>
+            <a href=""><i class="fas fa-user-circle"></i></a>
         </span>
     </nav>
 </div>
