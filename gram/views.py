@@ -19,9 +19,9 @@ def signup(request):
         if form.is_valid():
             form.save()
             username = form.cleaned_data.get('username')
-            user_password = form.cleaned_data.get('qwerty')
-            user = authenticate(username=username, user_password=raw_password)
-            login(request, user)
+            user_password = form.cleaned_data.get('password')
+            user = authenticate(username=username, user_password=user_password)
+            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
             return redirect('index')
     else:
         form = SignUpForm()
