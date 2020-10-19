@@ -31,9 +31,9 @@
                 <p class="ml-3">No comments yet</p>
                 {% endfor %}
                 
-                <!--HTML redirect for likes-->
+                <!--HTML embedding for likes-->
                 <div id="like-section">
-                    {% include 'gram/like.html' %}
+                    {% include 'gram_temp/like.html' %}
                 </div>
                 <form class="form" action="" method="post" novalidate>
                     {% csrf_token %}
